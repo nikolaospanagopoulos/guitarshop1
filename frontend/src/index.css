@@ -49,8 +49,23 @@ h2{
 }
 .carousel a {
   margin: 0 auto;
+  max-width: 100%;
 }
  
+.zoom-box{
+  overflow: hidden;
+}
+
+.zoom{
+  transition: 0.5s all ease-in-out
+}
+.zoom:hover{
+  transform: scale(1.1);
+  transition: transform .5s ease ;
+  overflow: hidden;
+}
+
+
 @media (max-width: 900px) {
   .carousel-caption h2 {
     font-size: 2.5vw;

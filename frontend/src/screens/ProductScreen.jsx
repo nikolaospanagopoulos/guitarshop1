@@ -58,8 +58,8 @@ const {error:errorProductReview, success:successProductReview} = productReviewCr
                     <div>
                         <Meta title={product.name}/>
                     <Row>
-                    <Col md={6}>
-                        <Image src={product.image} alt={product.name} fluid/>
+                    <Col md={6} className='zoom-box'>
+                        <Image src={product.image} alt={product.name} fluid className='zoom'/>
                     </Col>
                     <Col md={3}>
                         <ListGroup variant="flush">
