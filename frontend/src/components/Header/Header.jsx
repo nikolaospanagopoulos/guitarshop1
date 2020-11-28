@@ -21,19 +21,30 @@ const Header = () => {
       <Navbar bg="dark"  variant='dark' expand="lg" collapseOnSelect>
           <Container>
          
-        <LinkContainer to='/'>
+        <LinkContainer to='/' exact>
         <Navbar.Brand >GuitarShop</Navbar.Brand>
-        </LinkContainer>  
-        <Menu/>
+        </LinkContainer>
+          
+        
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
+          <LinkContainer to='/' exact>
+          <Nav.Link >Home</Nav.Link>
+          </LinkContainer>
+          <LinkContainer to='/about' exact>
+          <Nav.Link >About</Nav.Link>
+          </LinkContainer>
+          <LinkContainer to='/categories' exact>
+          <Nav.Link >Categories</Nav.Link>
+          </LinkContainer>
           <LinkContainer to='/cart'>
-            <Nav.Link > <i className="fas fa-shopping-cart"></i> Cart</Nav.Link>
+            <Nav.Link> <i className="fas fa-shopping-cart"></i> Cart</Nav.Link>
             </LinkContainer>
             {userInfo ? (
-              <NavDropdown title={userInfo.name} id='username'> 
-                <LinkContainer to='/profile'>
+              <NavDropdown title={userInfo.name} id='username'>
+                 
+                <LinkContainer to='/profile' >
                   <NavDropdown.Item>Profile</NavDropdown.Item>
                 </LinkContainer>
                 <NavDropdown.Item onClick={logoutHandler}>
