@@ -35,6 +35,7 @@ const productSchema = mongoose.Schema({
         required:true
     },
     category:{
+        
         type:String,
         required:true
     },
@@ -63,6 +64,8 @@ const productSchema = mongoose.Schema({
         required:true,
         default:0
     }
+    ,
+    
 },{
     timestamps:true
 })

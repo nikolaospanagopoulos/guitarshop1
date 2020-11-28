@@ -2,7 +2,7 @@ main{
     min-height: 80vh;
 }
 
-he{
+h3{
     padding: 1rem 0;
 }
 
@@ -24,7 +24,7 @@ h2{
 .carousel-item-prev,
 .carousel-item.active {
   display: flex;
-  
+
   
 }
 .carousel-caption {
@@ -50,6 +50,7 @@ h2{
 .carousel a {
   margin: 0 auto;
   max-width: 100%;
+  
 }
  
 .zoom-box{
@@ -58,6 +59,16 @@ h2{
 
 .zoom{
   transition: 0.5s all ease-in-out
+}
+
+.category{
+  text-align: center;
+  
+  
+}
+
+.home-title{
+  text-align: center;
 }
 .zoom:hover{
   transform: scale(1.1);
