@@ -1,10 +1,11 @@
 import React from "react";
 import {useDispatch,useSelector} from 'react-redux';
 import {LinkContainer} from 'react-router-bootstrap';
-import {Navbar,Nav,Container, NavDropdown} from 'react-bootstrap';
+import {Navbar,Nav,Container, NavDropdown,Image} from 'react-bootstrap';
 import {logout} from '../../actions/userActions';
 import Menu from '../menu/Menu'
-import {Route} from 'react-router-dom'
+import {Route,Link} from 'react-router-dom'
+import metal1 from './metal1.png'
 const Header = () => {
 
   const dispatch = useDispatch()
@@ -18,12 +19,12 @@ const Header = () => {
 
   return (
     <header>
-      <Navbar bg="dark"  variant='dark' expand="lg" collapseOnSelect>
+      <Navbar bg="dark"  variant='dark' expand="lg" collapseOnSelect >
           <Container>
          
-        <LinkContainer to='/' exact>
-        <Navbar.Brand >GuitarShop</Navbar.Brand>
-        </LinkContainer>
+        
+        <Nav.Link href='/' onClick={() => window.location.href=`/`}> <h4 className='metal'>METALMASTER</h4>  </Nav.Link>
+        
           
         
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -35,7 +36,7 @@ const Header = () => {
           <LinkContainer to='/about' exact>
           <Nav.Link >About</Nav.Link>
           </LinkContainer>
-          <LinkContainer to='/categories' exact>
+          <LinkContainer to='/categories' >
           <Nav.Link >Categories</Nav.Link>
           </LinkContainer>
           <LinkContainer to='/cart'>
