@@ -68,7 +68,10 @@ h2{
   
   
 }
-
+.subtitle{
+  text-align: center;
+  margin-top: 10rem;
+}
 .home-title{
   text-align: center;
 }

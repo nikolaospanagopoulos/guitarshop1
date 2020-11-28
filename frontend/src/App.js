@@ -19,6 +19,7 @@ import ProductList from './screens/ProductList';
 import ProductEditScreen from './screens/ProductEditScreen';
 import OrderListScreen from './screens/OrderListScreen';
 import Categories from './screens/Categories';
+import About from './screens/About';
 const App = () => {
   return (
     <Router>
@@ -27,6 +28,7 @@ const App = () => {
         <Container>
         < Route path='/order/:id' component={OrderScreen} />
         < Route path='/payment' component={PaymentScreen} />
+        < Route path='/about' component={About} />
         < Route path='/shipping' component={ShippingScreen} /> 
         < Route path='/placeorder' component={PlaceOrderScreen} />
         < Route path='/login' component={LoginScreen} />
