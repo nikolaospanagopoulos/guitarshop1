@@ -5,7 +5,7 @@ import tama from '../components/pictures/tama.jpg'
 
 const Categories = () => {
     return (
-        <Row xs='2'>
+        <Row xs={1} md={6} xl={2}>
         <Col className='align-items-stretch d-flex' >
         <Card className="my-3 p-3 rounded" >
             <Link to={`/category/bass`}>
