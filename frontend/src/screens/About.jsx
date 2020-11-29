@@ -14,7 +14,7 @@ const About = () => {
             <p>You can contact us 24/7. Our call center never stops working.  </p>
             <p>Phone Numbers: +30 2610 587-965, +30 2610 896-214</p>
             <p>E-mail address: metalguitars@guitarmasters.com</p>
-            <h4 className='subtitle'>Pick an Instrumnt with soul!</h4>
+            <h4 className='subtitle'>Pick an Instrument with soul!</h4>
         </div>
      );
 }

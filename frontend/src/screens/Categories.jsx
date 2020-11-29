@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import {Card,Col,Row} from 'react-bootstrap'
-
+import tama from '../components/pictures/tama.jpg'
 
 const Categories = () => {
     return (
@@ -45,7 +45,7 @@ const Categories = () => {
         <Col className='align-items-stretch d-flex'>
         <Card className="my-3 p-3 rounded">
             <Link to={`/category/drums`}>
-            <Card.Img src='https://www.bettermusic.com.au/media/catalog/product/cache/1/image/1224x/9df78eab33525d08d6e5fb8d27136e95/p/e/pen_tw42rzs_agjb_01.png' variant='top'/>
+            <Card.Img src={tama} variant='top'/>
             </Link>
             <Card.Body>
             <Link to={`/category/drums`}>
