@@ -20,6 +20,7 @@ import ProductEditScreen from './screens/ProductEditScreen';
 import OrderListScreen from './screens/OrderListScreen';
 import Categories from './screens/Categories';
 import About from './screens/About';
+import Brands from './screens/Brands';
 const App = () => {
   return (
     <Router>
@@ -29,6 +30,7 @@ const App = () => {
         < Route path='/order/:id' component={OrderScreen} />
         < Route path='/payment' component={PaymentScreen} />
         < Route path='/about' component={About} />
+        < Route path='/brands' component={Brands} />
         < Route path='/shipping' component={ShippingScreen} /> 
         < Route path='/placeorder' component={PlaceOrderScreen} />
         < Route path='/login' component={LoginScreen} />

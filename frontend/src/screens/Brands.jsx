@@ -1,21 +1,24 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import {Card,Col,Row} from 'react-bootstrap'
-import tama from '../pictures/tama.jpg'
-
-const Categories = () => {
+import dean from '../pictures/deanlogo.jpg'
+import fender from '../pictures/fenderlogo.jpg'
+import Ibanez from '../pictures/ibanezlogo.jpg'
+import jackson from '../pictures/jacksonlogo.jpg'
+import tama from '../pictures/tamalogo.png'
+const Brands = () => {
     return (
         <Row xs={1} md={6} xl={2}>
         <Col className='align-items-stretch d-flex' >
         <Card className="my-3 p-3 rounded" >
-            <Link to={`/category/bass`}>
-            <Card.Img src='https://n1.sdlcdn.com/imgs/a/e/8/SDL423259603_1382446861_image1-4f997.jpg' variant='top'/>
+            <Link to={`/brand/dean`}>
+            <Card.Img src={dean} variant='top'/>
             </Link>
             <Card.Body>
-            <Link to={`/category/bass`}>
+            <Link to={`/brand/dean`}>
             <Card.Title as='div'>
                 <strong>
-                    <h2>BASSES</h2> 
+                    <h2>Dean Guitars</h2> 
                 </strong>
             </Card.Title>
             </Link>
@@ -26,14 +29,14 @@ const Categories = () => {
 
         <Col className='align-items-stretch d-flex'>
         <Card className="my-3 p-3 rounded">
-            <Link to={`/category/Guitars`}>
-            <Card.Img src='https://cdn10.bigcommerce.com/s-ayzjl9/products/9069/images/60169/256840__10023.1492956867.1280.1280.jpg?c=2' variant='top'/>
+            <Link to={`/brand/Fender`}>
+            <Card.Img src={fender} variant='top'/>
             </Link>
             <Card.Body>
-            <Link to={`/category/Guitars`}>
+            <Link to={`/brand/Fender`}>
             <Card.Title as='div'>
                 <strong>
-                    <h2>Guitars</h2> 
+                    <h2>Fender Guitars</h2> 
                 </strong>
             </Card.Title>
             </Link>
@@ -44,32 +47,51 @@ const Categories = () => {
 
         <Col className='align-items-stretch d-flex'>
         <Card className="my-3 p-3 rounded">
-            <Link to={`/category/drums`}>
+            <Link to={`/brand/Ibanez`}>
+            <Card.Img src={Ibanez} variant='top'/>
+            </Link>
+            <Card.Body>
+            <Link to={`/brand/Ibanez`}>
+            <Card.Title as='div'>
+                <strong>
+                    <h2>Ibanez Guitars</h2> 
+                </strong>
+            </Card.Title>
+            </Link>
+            </Card.Body>
+        </Card>
+        </Col>
+
+
+        <Col className='align-items-stretch d-flex'>
+        <Card className="my-3 p-3 rounded">
+            <Link to={`/brand/Jackson`}>
+            <Card.Img src={jackson} variant='top'/>
+            </Link>
+            <Card.Body>
+            <Link to={`/brand/Jackson`}>
+            <Card.Title as='div'>
+                <strong>
+                    <h2>Jackson Guitars</h2> 
+                </strong>
+            </Card.Title>
+            </Link>
+            </Card.Body>
+        </Card>
+        
+        </Col>
+
+
+        <Col className='align-items-stretch d-flex'>
+        <Card className="my-3 p-3 rounded">
+            <Link to={`/brand/tama`}>
             <Card.Img src={tama} variant='top'/>
             </Link>
             <Card.Body>
-            <Link to={`/category/drums`}>
+            <Link to={`/brand/tama`}>
             <Card.Title as='div'>
                 <strong>
-                    <h2>Drums</h2> 
-                </strong>
-            </Card.Title>
-            </Link>
-            </Card.Body>
-        </Card>
-        </Col>
-
-
-        <Col className='align-items-stretch d-flex'>
-        <Card className="my-3 p-3 rounded">
-            <Link to={`/category/accessories`}>
-            <Card.Img src='https://www.cranbournemusic.com.au/wp-content/uploads/2017/03/930004016631.jpg' variant='top'/>
-            </Link>
-            <Card.Body>
-            <Link to={`/category/accessories`}>
-            <Card.Title as='div'>
-                <strong>
-                    <h2>accessories</h2> 
+                    <h2>Tama Drums</h2> 
                 </strong>
             </Card.Title>
             </Link>
@@ -81,4 +103,4 @@ const Categories = () => {
     );
 }
  
-export default Categories;
+export default Brands;

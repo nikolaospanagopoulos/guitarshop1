@@ -32,9 +32,12 @@ useEffect(()=>{
     return(
         <div>
             <Meta/>
-            {!keyword ? <ProductsCarousel/> : <Button className="my-3"  onClick={() => history.goBack()}>Go Back</Button>}
+            {!keyword && !brandQuery  ? <ProductsCarousel/> : <Button className="my-3"  onClick={() => history.goBack()}>Go Back</Button>}
+            
             {keyword && <h1 className='category'> {keyword} </h1>}
-            {!keyword && <h1 className='home-title'>Our products</h1>}
+            {brandQuery && <h1 className='category'> {brandQuery} </h1>}
+            
+            {!keyword && !brandQuery ? <h1 className='home-title'>Our products</h1> : ''}
             
     {loading ? (<Loader/>) : error ? (<Message variant={'danger'}>{error}</Message>) :   
     <div>
