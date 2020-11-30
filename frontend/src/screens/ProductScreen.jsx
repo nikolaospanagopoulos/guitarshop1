@@ -53,7 +53,7 @@ const {error:errorProductReview, success:successProductReview} = productReviewCr
     }
     return(
         <div>
-            <Button className="btn btn-dark my-3"  onClick={() => history.goBack()}>Go Back</Button>
+            <Button className="button"  onClick={() => history.goBack()}>Go Back</Button>
                 {loading ? <Loader/> : error ? <Message variant='danger'>{error}</Message> : (
                     <div>
                         <Meta title={product.name}/>

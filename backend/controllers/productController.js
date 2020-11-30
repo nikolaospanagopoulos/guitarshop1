@@ -3,17 +3,22 @@ import Product from '../models/productModel.js'
 
 
 const getProducts = asyncHandler(async(req,res) =>{
-    const pageSize = 12
+    const pageSize = 12 
     const page = Number(req.query.pageNumber) || 1
+    const brandQuery = req.query.brandQuery ? {
+        brand:{$regex: req.query.brandQuery,
+            $options: 'i',}
+    }:{}
     const keyword = req.query.keyword ? {
-        category:req.query.keyword,
+        category:{$regex: req.query.keyword,
+            $options: 'i',},
     }: {}
 
     
-    const count = await Product.countDocuments({...keyword})
+    const count = await Product.countDocuments({...keyword,...brandQuery})
     
     
-    const products = await Product.find({...keyword}).limit(pageSize).skip(pageSize * (page-1))
+    const products = await Product.find({...keyword,...brandQuery}).limit(pageSize).skip(pageSize * (page-1))
      
     res.json({products,page,pages:Math.ceil(count/pageSize)}) 
 })

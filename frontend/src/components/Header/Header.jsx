@@ -39,6 +39,9 @@ const Header = () => {
           <LinkContainer to='/categories' >
           <Nav.Link >Categories</Nav.Link>
           </LinkContainer>
+          <LinkContainer to='/brands' >
+          <Nav.Link >Brands</Nav.Link>
+          </LinkContainer>
           <LinkContainer to='/cart'>
             <Nav.Link> <i className="fas fa-shopping-cart"></i> Cart</Nav.Link>
             </LinkContainer>

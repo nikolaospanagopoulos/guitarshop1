@@ -14,7 +14,7 @@ const Homescreen=({match,history})=>{
     const productList = useSelector(state=>state.productList)
     const {loading,error,products,page,pages} = productList
     const keyword = match.params.keyword
-    
+    const brandQuery = match.params.brandQuery
     const pageNumber = match.params.pageNumber || 1
     
 
@@ -23,16 +23,16 @@ const Homescreen=({match,history})=>{
 
 
 useEffect(()=>{
-    dispatch(listProducts(keyword,pageNumber))
+    dispatch(listProducts(keyword,pageNumber,brandQuery))
 
 
 
-},[dispatch,keyword,pageNumber])
+},[dispatch,keyword,pageNumber,brandQuery])
 
     return(
         <div>
             <Meta/>
-            {!keyword ? <ProductsCarousel/> : <Button className="btn btn-dark my-3"  onClick={() => history.goBack()}>Go Back</Button>}
+            {!keyword ? <ProductsCarousel/> : <Button className="my-3"  onClick={() => history.goBack()}>Go Back</Button>}
             {keyword && <h1 className='category'> {keyword} </h1>}
             {!keyword && <h1 className='home-title'>Our products</h1>}
             
@@ -45,7 +45,7 @@ useEffect(()=>{
                     </Col>
                 ))}
             </Row>
-            <Paginate pages={pages} page={page}  keyword={keyword ? keyword : ''}/>
+            <Paginate pages={pages} page={page} brandQuery={brandQuery ? brandQuery : ''} keyword={keyword ? keyword : ''}/>
             </div>
             }
           
